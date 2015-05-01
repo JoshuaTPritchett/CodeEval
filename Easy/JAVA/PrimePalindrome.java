@@ -18,7 +18,6 @@ public class PrimePalindrome
 			for (int q = 3; q < sqrt; q += 2) 
 			{if (i % q == 0){i++;}}
         		
-			
 			isPalindrome(i);
 			if (highestPrime < testPrime)
 				highestPrime = testPrime;

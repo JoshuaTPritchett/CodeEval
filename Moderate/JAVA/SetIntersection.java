@@ -1,16 +1,21 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.util.TreeSet;
+
 
 public class SetIntersection
 {
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws IOException
 	{
 		File file = new File(args[0]);
-		Scanner scanner = new Scanner(file);
-		while(scanner.hasNextLine())
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line ="";
+		while((line = buffer.readLine()) != null)
 		{
 			int last = 0;
-			String[] split = scanner.nextLine().split(";");
+			String[] split = line.split(";");
 			String[] listOne = split[0].split(",");
 			String[] listTwo = split[1].split(",");
 			TreeSet<Integer> tree = new TreeSet<Integer>();

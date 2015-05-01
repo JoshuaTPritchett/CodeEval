@@ -1,4 +1,8 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+
 public class MultiplesOfANumber
 {
 
@@ -12,7 +16,6 @@ public class MultiplesOfANumber
 		while((line = reader.readLine()) != null)
 		{	
 	
-			line = line.trim();
 			split = line.split(",",line.length());
 			int total = 0;
 			int x = Integer.parseInt(split[0]);

@@ -5,9 +5,9 @@ public class SumOfPrimes
 	{
 		
 		  
-	int number = 2;
-	int count = 0;
-	long sum = 0;
+		int number = 2;
+		int count = 0;
+		long sum = 0;
 		while(count < 1000){
 			if(isPrimeNumber(number)){
 				sum += number;
